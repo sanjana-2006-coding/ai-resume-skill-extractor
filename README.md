@@ -1,53 +1,56 @@
 # AI Resume Skill Extractor (MVP)
 
-A lightweight, fast MVP that extracts skills from PDF resumes, identifies job-required skills, and computes a match score using NLP + fuzzy matching. Includes both a CLI tool and a Streamlit UI.
+A lightweight NLP-based tool that extracts skills from PDF resumes, identifies job-required skills, and computes a match score using keyword matching and fuzzy similarity.  
+Includes both a **CLI tool** and a **Streamlit UI**.
 
-### 🚀 Tech Stack
-- **Python**
-- **pdfplumber** (PDF text extraction)
-- **spaCy** (text preprocessing)
-- **FuzzyWuzzy + Levenshtein** (similarity-based skill matching)
-- **Streamlit** (interactive UI)
+---
+
+## 🚀 Tech Stack
+- **Python 3.12**
+- **pdfplumber** – PDF text extraction  
+- **spaCy** – Text preprocessing  
+- **FuzzyWuzzy + Levenshtein** – Similarity-based skill matching  
+- **Streamlit** – Web UI  
 
 ---
 
 ## ✨ Features
-- Extracts text from **PDF resumes** (text-based, not OCR).
-- Cleans and normalizes resume and job description text.
-- Identifies skills across multiple categories:
+- Extracts text from PDF resumes (non-OCR).
+- Cleans and normalizes resume & job description text.
+- Categorized skill recognition:
   - Programming Languages  
   - Frameworks  
   - Databases  
-  - Cloud & DevOps  
-  - ML/AI  
-  - Tools  
-- Fuzzy matching to detect skills even with partial/inexact matches.
+  - Cloud / DevOps  
+  - ML / AI  
+  - Tools
+- Fuzzy matching to detect partial or misspelled skills.
 - Produces:
-  - **Match score (%)**
-  - **Matched skills**
-  - **Resume skills (categorized)**
-  - **Job skills (categorized)**
-- Streamlit UI with **JSON summary download**.
-- CLI mode for quick terminal executions.
+  - **Match Score (%)**
+  - **Matched Skills**
+  - **Resume Skill Categories**
+  - **Job Skill Categories**
+  - **JSON Summary**
+- Streamlit UI for interactive use.
 
 ---
 
 ## 📁 Project Structure
 
+```text
 ai-resume-skill-extractor/
 ├── app/
-│ ├── parser/
-│ │ ├── pdf_parser.py
-│ │ └── clean_text.py
-│ ├── extractor/
-│ │ ├── entities.py
-│ │ └── skill_extractor.py
-│ ├── matcher/
-│ │ └── job_matcher.py
-│ ├── main.py
-│ └── web_app.py
+│   ├── parser/
+│   │   ├── pdf_parser.py
+│   │   └── clean_text.py
+│   ├── extractor/
+│   │   ├── entities.py
+│   │   └── skill_extractor.py
+│   ├── matcher/
+│   │   └── job_matcher.py
+│   ├── main.py
+│   └── web_app.py
 ├── docs/
-│ ├── architecture.png
-│ └── screenshots/
+│   ├── architecture.png
+│   └── screenshots/
 └── README.md
-```md
