@@ -33,6 +33,7 @@ A lightweight, fast MVP that extracts skills from PDF resumes, identifies job-re
 ---
 
 ## 📁 Project Structure
+
 ai-resume-skill-extractor/
 ├── app/
 │ ├── parser/
@@ -49,3 +50,4 @@ ai-resume-skill-extractor/
 │ ├── architecture.png
 │ └── screenshots/
 └── README.md
+```md
